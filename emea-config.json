@@ -1,0 +1,61 @@
+{
+	"template": "mulesoft_api_tmplt",
+	"pom_variables": {
+		"template": "mulesoft_api_tmplt",
+		"group_id": "GROUP_ID",
+		"api_desc": "API_DESCRIPTION"
+	},
+	"admin_group": "oly_global-integration-admins",
+	"dev_group": "ext_tcs_global-integration-dev",
+	"org": "olympus",
+	"groupId": "3facbe32-41e6-470f-bec3-484b66d87bce",
+	"AZURE_TENANT_ID" : "e6d7ba17-4378-433f-96fa-a48c4590ca82",
+	"AZURE_CLIENT_ID":"549b815a-20a9-48bc-aaea-9000f89c2b34",
+	"AZURE_PROD_CLIENT_ID":"2e7a7e8b-2105-433d-81fa-7199ca9ed82a",
+	"AZURE_CLIENT_SECRET":"AZURE_EMEA_CLIENT_SECRET",
+	"AZURE_PROD_CLIENT_SECRET":"AZURE_PROD_EMEA_CLIENT_SECRET",
+	"pipeline_template_repo": "mule_global_util-repo",
+	"pipeline_template_filename": {
+		"DEV": "mule_dev_pipeline_template.xml",
+		"PROD": "mule_prod_pipeline_template.xml",
+		"SIT": "mule_sit_pipeline_template.xml",
+		"UAT": "mule_uat_pipeline_template.xml"
+	},	
+	"pipeline_dev_parameters": {
+		"ENCRYPT_KEY": "ENCRYPT_KEY_EMEA_NONPROD",
+		"ANYPOINT_PLATFORM_CLIENT_ID": "ANYPOINT_PLATFORM_EMEA_DEV_CLIENT_ID",
+		"ANYPOINT_PLATFORM_CLIENT_SECRET": "ANYPOINT_PLATFORM_EMEA_DEV_CLIENT_SECRET",
+		"MULE_AZURE_KEY_VAULT_NAME": "mulesoft-eu-kv",
+		"SPLUNK_TOKEN": "SPLUNK_TOKEN_EMEA_DEV",
+		"SPLUNK_INDEX": "integration-mulesoft-emea-dev-sandbox",
+		"PS_NAME": "emea-sandbox-ps",
+		"CUSTOM_URL_DOMAIN_NAME" : "eu.test.api.olympus.com"
+	},
+	"pipeline_sit_parameters": {
+		"ENCRYPT_KEY": "ENCRYPT_KEY_EMEA_NONPROD",
+		"ANYPOINT_PLATFORM_CLIENT_ID": "ANYPOINT_PLATFORM_EMEA_SIT_CLIENT_ID",
+		"ANYPOINT_PLATFORM_CLIENT_SECRET": "ANYPOINT_PLATFORM_EMEA_SIT_CLIENT_SECRET",
+		"SPLUNK_TOKEN": "SPLUNK_TOKEN_EMEA_SIT",
+		"SPLUNK_INDEX": "integration-mulesoft-emea-sit-sandbox",
+		"PS_NAME": "emea-sandbox-ps",
+		"CUSTOM_URL_DOMAIN_NAME" : "eu.test.api.olympus.com"
+	},
+	"pipeline_uat_parameters": {
+		"ENCRYPT_KEY": "ENCRYPT_KEY_EMEA_PROD",
+		"ANYPOINT_PLATFORM_CLIENT_ID": "ANYPOINT_PLATFORM_EMEA_UAT_CLIENT_ID",
+		"ANYPOINT_PLATFORM_CLIENT_SECRET": "ANYPOINT_PLATFORM_EMEA_UAT_CLIENT_SECRET",
+		"SPLUNK_TOKEN": "SPLUNK_TOKEN_EMEA_UAT",
+		"SPLUNK_INDEX": "integration-mulesoft-emea-uat-sandbox",
+		"PS_NAME": "emea-sandbox-ps",
+		"CUSTOM_URL_DOMAIN_NAME" : "eu.test.api.olympus.com"
+	},
+	"pipeline_prod_parameters": {
+		"ENCRYPT_KEY": "ENCRYPT_KEY_EMEA_NONPROD",
+		"ANYPOINT_PLATFORM_CLIENT_ID": "ANYPOINT_PLATFORM_EMEA_PROD_CLIENT_ID",
+		"ANYPOINT_PLATFORM_CLIENT_SECRET": "ANYPOINT_PLATFORM_EMEA_PROD_CLIENT_SECRET",
+		"SPLUNK_TOKEN": "SPLUNK_TOKEN_EMEA_PROD",
+		"SPLUNK_INDEX": "integration-mulesoft-emea-prod",
+		"PS_NAME": "emea-prod-ps",
+		"CUSTOM_URL_DOMAIN_NAME" : "eu.api.olympus.com"
+	}
+}
