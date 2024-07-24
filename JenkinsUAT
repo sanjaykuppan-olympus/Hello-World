@@ -10,7 +10,7 @@ pipeline {
         maven 'Maven-3.9.6'
     }
     environment {
-        githubApiKey = credentials('sanjaykuppan-olympus')
+        githubApiKey = credentials('GithubTempToken')
         GIT_CREDENTIAL_ID = 'GitHubGlobaliPaasCreds'
     }
     stages {
