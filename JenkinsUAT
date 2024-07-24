@@ -1,14 +1,31 @@
+import groovy.json.JsonSlurperClassic
+def buildVersion = params.BuildVersion
 pipeline {
-	agent any
-	stages {
-		stage('Exchange Deploy') {
-			//echo "Dev Pipeline Executed"
-		}
-		
-		stage('Build') {
-			steps {
-				//echo "Build completed.."			
-			}
-		}
-	}
+    agent  {
+        ecs {
+            inheritFrom 'build-example'
+        }
+    }
+  
+    environment {
+        githubApiKey = credentials('GithubTempToken')
+        GIT_CREDENTIAL_ID = 'GitHubGlobaliPaasCreds'
+    }
+    stages {
+        stage('Preparation') {
+            steps {
+                script {
+                    echo "Starting"
+		    echo "branch name"+scm.branches[0].name
+		echo "env variables"
+              	    sh 'printenv'
+		    echo "ending"
+                }
+            }
+        }
+        
+   
+
+    }
 }
+
