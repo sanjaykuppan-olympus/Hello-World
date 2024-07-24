@@ -18,7 +18,7 @@ pipeline {
             steps {
                 script {
                     
-                    def requestUrl = "https://api.github.com/repos/olympus/Hello-World/contents/" + configName
+                    def requestUrl = "https://api.github.com/repos/olympus/Hello-World/contents/emea-config.json?ref=Test"
                    
                     def headers = [[name:'Authorization', value:"Bearer " + githubApiKey ],
                                   [name:'X-GitHub-Api-Version', value:'2022-11-28'],
@@ -48,7 +48,7 @@ pipeline {
                     env.ORG = jsonData.org
                     sh 'java -version'
                     sh 'mvn -version'
-			
+		    echo "Azure Tenant ID :$AZURE_TENANT_ID   Azure App ID :$AZURE_APP_ID   Azure Vault Name :$MULE_AZURE_KEY_VAULT_NAME "
                 }
             }
         }
