@@ -18,7 +18,7 @@ pipeline {
             steps {
                 script {
                     echo "Starting"
-		    echo env.BRANCH_NAME
+		    echo scm.branches[0].name
                /*     def requestUrl = "https://api.github.com/repos/olympus/Hello-World/contents/emea-config.json?ref=Test"
                    
                     def headers = [[name:'Authorization', value:"Bearer " + githubApiKey ],
