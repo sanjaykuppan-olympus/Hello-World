@@ -17,7 +17,7 @@ pipeline {
         stage('Preparation') {
             steps {
                 script {
-                    
+                    echo "Starting"
                     def requestUrl = "https://api.github.com/repos/olympus/Hello-World/contents/emea-config.json?ref=Test"
                    
                     def headers = [[name:'Authorization', value:"Bearer " + githubApiKey ],
